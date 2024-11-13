@@ -1,149 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Affiliate Store</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KyZXEJxvM6eNNA6w2nWTbU1I6jOED8v1gF/luopHVnB0fN5k05hDjjrkTq4zYzqR" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Venture Key</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      padding-top: 100px; /* Give space for the fixed header */
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #007bff;
+      padding: 20px;
+      z-index: 1000; /* Make sure the header stays on top */
+      color: white;
+    }
+    .header img {
+      max-width: 100px;
+      float: left;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 36px;
+      flex-grow: 1; /* This ensures the title takes up available space */
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .card {
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      background-color: #fff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    }
+    .card:hover {
+      transform: scale(1.03); /* Zoom effect on hover */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .card-footer {
+      margin-top: 15px;
+    }
+    .card-footer a {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+    }
+    .card-footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
-
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">My Affiliate Store</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Shop</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <header class="hero bg-primary text-white text-center py-5">
-        <h1>Welcome to Our Affiliate Store</h1>
-        <p>Find the best products and deals online!</p>
-    </header>
+  <!-- Fixed Header with Logo on Right and Page Title -->
+  <div class="header">
+    <h1 style="text-align: center;">Venture Key</h1>
+    <img src="https://via.placeholder.com/100" alt="Logo">
+  </div>
 
-    <!-- Product Section -->
-    <div class="container py-5">
-        <h2 class="text-center mb-4">Featured Products</h2>
-        <div class="row">
-            <!-- Product 1 -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Product 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Product 1</h5>
-                        <p class="card-text">Amazing product description goes here.</p>
-                        <a href="https://affiliate-link.com/product1" class="btn btn-primary" target="_blank">Buy Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 2 -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Product 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Product 2</h5>
-                        <p class="card-text">Description of product 2.</p>
-                        <a href="https://affiliate-link.com/product2" class="btn btn-primary" target="_blank">Buy Now</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Product 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Product 3</h5>
-                        <p class="card-text">Description of product 3.</p>
-                        <a href="https://affiliate-link.com/product3" class="btn btn-primary" target="_blank">Buy Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <!-- Card Container -->
+  <div class="container">
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="https://via.placeholder.com/200" alt="Card 1">
+      <h3>Card Title 1</h3>
+      <p>This is some description about the card content.</p>
+      <div class="card-footer">
+        <a href="#">Learn More</a>
+      </div>
     </div>
+    <!-- Card 2 -->
+    <div class="card">
+      <img src="https://via.placeholder.com/200" alt="Card 2">
+      <h3>Card Title 2</h3>
+      <p>This is some description about the card content.</p>
+      <div class="card-footer">
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="card">
+      <img src="https://via.placeholder.com/200" alt="Card 3">
+      <h3>Card Title 3</h3>
+      <p>This is some description about the card content.</p>
+      <div class="card-footer">
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+    <!-- Card 4 -->
+    <div class="card">
+      <img src="https://via.placeholder.com/200" alt="Card 4">
+      <h3>Card Title 4</h3>
+      <p>This is some description about the card content.</p>
+      <div class="card-footer">
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+    <!-- Card 5 -->
+    <div class="card">
+      <img src="https://via.placeholder.com/200" alt="Card 5">
+      <h3>Card Title 5</h3>
+      <p>This is some description about the card content.</p>
+      <div class="card-footer">
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+    <!-- Card 6 -->
+    <div class="card">
+      <img src="https://via.placeholder.com/200" alt="Card 6">
+      <h3>Card Title 6</h3>
+      <p>This is some description about the card content.</p>
+      <div class="card-footer">
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+    <!-- Card 7 -->
+    <div class="card">
+      <img src="https://via.placeholder.com/200" alt="Card 7">
+      <h3>Card Title 7</h3>
+      <p>This is some description about the card content.</p>
+      <div class="card-footer">
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+    <!-- Card 8 -->
+    <div class="card">
+      <img src="https://via.placeholder.com/200" alt="Card 8">
+      <h3>Card Title 8</h3>
+      <p>This is some description about the card content.</p>
+      <div class="card-footer">
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+    <!-- Card 9 -->
+    <div class="card">
+      <img src="https://via.placeholder.com/200" alt="Card 9">
+      <h3>Card Title 9</h3>
+      <p>This is some description about the card content.</p>
+      <div class="card-footer">
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+    <!-- Card 10 -->
+    <div class="card">
+      <img src="https://via.placeholder.com/200" alt="Card 10">
+      <h3>Card Title 10</h3>
+      <p>This is some description about the card content.</p>
+      <div class="card-footer">
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+    <!-- Card 11 -->
+    <div class="card">
+      <img src="https://via.placeholder.com/200" alt="Card 11">
+      <h3>Card Title 11</h3>
+      <p>This is some description about the card content.</p>
+      <div class="card-footer">
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+    <!-- Card 12 -->
+    <div class="card">
+      <img src="https://via.placeholder.com/200" alt="Card 12">
+      <h3>Card Title 12</h3>
+      <p>This is some description about the card content.</p>
+      <div class="card-footer">
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+  </div>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4">
-        <p>&copy; 2024 My Affiliate Store | All Rights Reserved</p>
-    </footer>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pzjw8f+ua7Kw1TIq0z5zK1x1BzSOzP7HvsPAI1Wx6LB0U4hX9vReTfTzBsl5oDsk" crossorigin="anonymous"></script>
-
-    <!-- Custom Styles -->
-    <style>
-        /* Hero Section */
-        .hero {
-            background: #007bff;
-            color: white;
-            padding: 60px 0;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: bold;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-        }
-
-        /* Card Customization */
-        .card {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-        }
-
-        .card img {
-            border-bottom: 1px solid #ddd;
-        }
-
-        .card-title {
-            font-size: 1.25rem;
-            font-weight: bold;
-        }
-
-        .card-text {
-            font-size: 1rem;
-        }
-
-        .card-body {
-            text-align: center;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #343a40;
-            color: white;
-        }
-    </style>
 </body>
-
 </html>
